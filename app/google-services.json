@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "515850288887",
+    "firebase_url": "https://bemybuddy-2afa9.firebaseio.com",
+    "project_id": "bemybuddy-2afa9",
+    "storage_bucket": "bemybuddy-2afa9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515850288887:android:958dd80c53b374b0",
+        "android_client_info": {
+          "package_name": "com.example.bemybuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515850288887-4s3pvbuicg65rohgrc0c8og9et6noh80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bemybuddy",
+            "certificate_hash": "dab8f75d4ff3cc8404ef5b45f0ead1d4868db83a"
+          }
+        },
+        {
+          "client_id": "515850288887-o6ho3ad2dtfjhhsdjjj3bk0bso2c7uel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5zM_2HTTT5FQD_ddntBSiPLY1Kw0kMqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515850288887-o6ho3ad2dtfjhhsdjjj3bk0bso2c7uel.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
