@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="btnColor">#FF9933</color>
+    <color name="inputColor">#FFCB75</color>
+    <color name="mainColor">#7549B1</color>
+    <color name="burg">#53004B</color>
+    <color name="deeppurple">#461D7C</color>
+    <color name="yerro">#FDD023</color>
+    <color name="cuteyerro">#FCECAE </color>
+    <color name="uggoyerro">#E9B200 </color>
+    
 </resources>
