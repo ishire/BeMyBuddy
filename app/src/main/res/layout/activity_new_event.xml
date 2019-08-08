@@ -4,8 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".new_event">
+    tools:context=".new_event"
+    android:background="@color/mainColor">
+    <FrameLayout
+        android:id="@+id/navbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/cuteyerro"
+        app:layout_constraintBottom_toBottomOf="@+id/navbarContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_button"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/navigation"></com.google.android.material.bottomnavigation.BottomNavigationView>
     <ImageView
         android:id="@+id/event_photo"
         android:layout_width="150dp"
@@ -25,16 +44,16 @@
 
     <EditText
         android:id="@+id/event_holders"
-        android:layout_width="269dp"
-        android:layout_height="47dp"
+        android:layout_width="284dp"
+        android:layout_height="60dp"
         android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="208dp"
+        android:background="@drawable/roundbtn"
         android:ems="10"
-        android:hint="The people holding the event!"
+        android:fontFamily="@font/spicy_rice"
+        android:hint="     The people holding the event!"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,40 +64,40 @@
 
     <EditText
         android:id="@+id/event_desc"
-        android:layout_width="261dp"
-        android:layout_height="139dp"
+        android:layout_width="296dp"
+        android:layout_height="165dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="260dp"
+        android:background="@drawable/roundbtn"
         android:ems="10"
-        android:hint="The description of the event!"
+        android:fontFamily="@font/spicy_rice"
+        android:hint="      The description of the event!"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/event_holders"
-        app:layout_constraintVertical_bias="0.471"
-        />
+        app:layout_constraintVertical_bias="0.533" />
 
     <EditText
         android:id="@+id/event_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="298dp"
+        android:layout_height="33dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="268dp"
+        android:background="@drawable/roundbtn"
         android:ems="10"
+        android:fontFamily="@font/spicy_rice"
+        android:hint="       The date and time of the event!"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:hint="The date and time of the event!"
 
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/event_photo"
         app:layout_constraintVertical_bias="1.0" />
@@ -92,6 +111,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/roundbtn"
+        android:fontFamily="@font/spicy_rice"
         android:text="Add Event!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

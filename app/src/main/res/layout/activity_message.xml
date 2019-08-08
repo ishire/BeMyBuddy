@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Message"
-    android:background="@color/cuteyerro">
+    android:background="@color/mainColor">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -31,6 +31,28 @@
         tools:visibility="visible"
         ></androidx.recyclerview.widget.RecyclerView>
 
+    <FrameLayout
+        android:id="@+id/navbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/navbarContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_button"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/navigation"
+        android:background="@color/cuteyerro"
+        ></com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
 
@@ -44,7 +66,7 @@
 
         android:layout_marginEnd="8dp"
 
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="64dp"
 
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,6 +86,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
+            android:background="@drawable/roundbtn"
+            android:fontFamily="@font/spicy_rice"
             android:text="Send" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>

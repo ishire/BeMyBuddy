@@ -7,11 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,6 +37,9 @@ public class Inbox extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inbox);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
 
 
         mDatabaseUsers = FirebaseDatabase.getInstance().getReference().child("Users");
@@ -43,6 +49,49 @@ public class Inbox extends AppCompatActivity {
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
+        BottomNavigationView bnv = (BottomNavigationView) findViewById(R.id.navView);
+        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                if(menuItem.getItemId() == R.id.home){
+                    Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_LONG).show();
+                }
+                return false;
+            }
+        });
+
+        bnv.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                        Intent intent;
+                        switch (menuItem.getItemId()) {
+                            case R.id.home:
+                                // do nothing because we're already here
+                                //Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_LONG).show();
+                                Intent intent1;
+                                intent1 = new Intent(Inbox.this, HomeActivity.class);
+                                startActivity(intent1);
+                                break;
+
+
+
+                            case R.id.inbox:
+                                Toast.makeText(getApplicationContext(), "inbox", Toast.LENGTH_LONG).show();
+
+                            case R.id.profile:
+                                //T
+                                //Intent intent3;
+                                //ntent3 = new Intent(Message.this, ProfileActivity.class);
+                                //startActivity(intent3);
+                                break;
+
+                        }
+                        return false;
+                    }
+                }
+        );
 
 
         mDatabase.addValueEventListener(new ValueEventListener() {
