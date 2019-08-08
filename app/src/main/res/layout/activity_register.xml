@@ -4,7 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bemybuddy.RegisterActivity">
+    tools:context="com.example.bemybuddy.RegisterActivity"
+    android:background="@color/mainColor">
+    <FrameLayout
+        android:id="@+id/navbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/navbarContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_button"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/navigation"
+        android:background="@color/cuteyerro"
+        ></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
     <ImageView
@@ -28,14 +49,16 @@
 
     <EditText
         android:id="@+id/fname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="32dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/roundbtn"
         android:ems="10"
-        android:hint="First Name"
+        android:fontFamily="@font/spicy_rice"
+        android:hint="  First Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,14 +69,16 @@
 
     <EditText
         android:id="@+id/lname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="309dp"
+        android:layout_height="32dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/roundbtn"
         android:ems="10"
-        android:hint="Last Name"
+        android:fontFamily="@font/spicy_rice"
+        android:hint="  Last Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,33 +89,37 @@
 
     <EditText
         android:id="@+id/emailreg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="32dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="264dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/roundbtn"
         android:ems="10"
-        android:hint="Email"
+        android:fontFamily="@font/spicy_rice"
 
+        android:hint="  Email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.400" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/passreg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="32dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/roundbtn"
         android:ems="10"
-        android:hint="Password"
+        android:fontFamily="@font/spicy_rice"
+        android:hint="  Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,17 +150,17 @@
         android:layout_width="0dp"
         android:layout_height="138dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:hint="A short description about you!"
+        android:background="@drawable/roundbtn"
+        android:fontFamily="@font/spicy_rice"
+        android:hint="  A short description about you!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/regUserPhoto"
-        app:layout_constraintVertical_bias="0.629" />
+        app:layout_constraintVertical_bias="0.594" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

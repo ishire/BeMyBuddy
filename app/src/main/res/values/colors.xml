@@ -5,11 +5,13 @@
     <color name="colorAccent">#FF4081</color>
     <color name="btnColor">#FF9933</color>
     <color name="inputColor">#FFCB75</color>
-    <color name="mainColor">#7549B1</color>
+    <color name="mainColor">#BF7FBF</color>
     <color name="burg">#53004B</color>
     <color name="deeppurple">#461D7C</color>
     <color name="yerro">#FDD023</color>
     <color name="cuteyerro">#FCECAE </color>
     <color name="uggoyerro">#E9B200 </color>
+    <color name="pinky">#e5bdfa</color>
+
     
 </resources>

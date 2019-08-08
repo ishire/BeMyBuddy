@@ -24,7 +24,8 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/border">
 
             <ImageView
                 android:id="@+id/event_card_pic"
@@ -34,8 +35,8 @@
 
             <TextView
                 android:id="@+id/holders"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="177dp"
+                android:layout_height="200dp"
 
                 android:gravity="center"
 
@@ -44,8 +45,8 @@
 
             <TextView
                 android:id="@+id/desc"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="177dp"
+                android:layout_height="300dp"
 
                 android:gravity="center"
 
@@ -55,7 +56,7 @@
             <TextView
                 android:id="@+id/date"
                 android:layout_width="177dp"
-                android:layout_height="333dp"
+                android:layout_height="400dp"
 
                 android:gravity="center"
 

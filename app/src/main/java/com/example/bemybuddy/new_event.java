@@ -8,7 +8,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -17,6 +20,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
@@ -69,6 +73,46 @@ public class new_event extends AppCompatActivity implements View.OnClickListener
                 startActivityForResult(picIntent,1);
             }
         });
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        BottomNavigationView bnv = (BottomNavigationView) findViewById(R.id.navView);
+
+        bnv.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                        Intent intent;
+                        switch (menuItem.getItemId()) {
+                            case R.id.home:
+                                // do nothing because we're already here
+                                //Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_LONG).show();
+                                Intent intent1;
+                                intent1 = new Intent(new_event.this, HomeActivity.class);
+                                startActivity(intent1);
+                                break;
+
+
+
+                            case R.id.inbox:
+                                //Toast.makeText(getApplicationContext(), "inbox", Toast.LENGTH_LONG).show();
+                                Intent intent3 = new Intent(new_event.this, Inbox.class);
+                                startActivity(intent3);
+                                break;
+
+                            case R.id.profile:
+                                //Toast.makeText(getApplicationContext(), "profile", Toast.LENGTH_LONG).show();
+                                //Intent intent3;
+                                //intent3 = new Intent(Message.this, ProfileActivity.class);
+                                //startActivity(intent3);
+                                break;
+
+                        }
+                        return false;
+                    }
+                }
+        );
 
 
 

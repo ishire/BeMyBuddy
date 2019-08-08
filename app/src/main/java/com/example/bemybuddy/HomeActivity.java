@@ -5,7 +5,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -16,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
@@ -51,6 +55,47 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mAuth = FirebaseAuth.getInstance();
         eventdb =  FirebaseDatabase.getInstance().getReference().child("Events");
         key = (TextView) findViewById(R.id.key);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        BottomNavigationView bnv = (BottomNavigationView) findViewById(R.id.navView);
+
+        bnv.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                        //Toast.makeText(getApplicationContext(), "menu", Toast.LENGTH_LONG).show();
+
+
+                        Intent intent;
+                        switch (menuItem.getItemId()) {
+                            case R.id.home:
+                                // do nothing because we're already here
+                                //
+
+
+
+
+                            case R.id.inbox:
+                                Toast.makeText(getApplicationContext(), "i", Toast.LENGTH_LONG).show();
+                                Intent intent3 = new Intent(HomeActivity.this, Inbox.class);
+                                startActivity(intent3);
+                                //break;
+
+                            case R.id.profile:
+                                //Toast.makeText(getApplicationContext(), "profile", Toast.LENGTH_LONG).show();
+                                //Intent intent3;
+                                //intent3 = new Intent(Message.this, ProfileActivity.class);
+                                //tartActivity(intent3);
+                                //break;
+
+                        }
+                        return false;
+                    }
+                }
+        );
+
 
 
 
@@ -260,7 +305,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == addEvent){
-            Intent event = new Intent(HomeActivity.this, Inbox.class);
+            Intent event = new Intent(HomeActivity.this, new_event.class);
             startActivity(event);
 
         }
